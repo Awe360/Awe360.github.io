@@ -7,13 +7,13 @@ app.use(express.json());
 
 // GET request handler
 app.get('/', (req, res) => {
-  res.send('Hello from GET request!');
+  res.json('Hello from GET request!');
 });
 
 // POST request handler
 app.post('/', (req, res) => {
   const data = req.body;
-  res.send(`Received POST data: ${JSON.stringify(data)}`);
+  res.json(`Received POST data: ${JSON.stringify(data)}`);
 });
 
 // Start the server
